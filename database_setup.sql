@@ -1,26 +1,5 @@
--- ====================================================================
--- Step 1: Create the Database
--- This command creates a new database for our project.
--- Note: Some SQL clients require you to run this command separately.
--- In others, you might create the database through the UI.
--- ====================================================================
 
 CREATE DATABASE report_db;
-
-
--- ====================================================================
--- Step 2: Create the Superstore Table
--- This command creates the table that will hold the superstore sales data.
--- The column names and data types are based on the standard
--- "Sample - Superstore" dataset.
---
--- Note on Data Types:
--- - VARCHAR is used for text fields. The length (e.g., 255) is a max length.
--- - DATE is for date values.
--- - DECIMAL(10, 2) is used for currency to handle precision.
--- - INT is for whole numbers.
--- ====================================================================
-
 CREATE TABLE superstore (
     "Row ID" INT,
     "Order ID" VARCHAR(255),
@@ -43,5 +22,5 @@ CREATE TABLE superstore (
     "Profit" DECIMAL(10, 2)
 );
 
--- After running this script, you will have an empty 'superstore' table
--- in your 'report_db' database, ready for data import.
+
+
