@@ -24,9 +24,8 @@ GROUP BY order_year, order_month
 ORDER BY order_year, order_month;
 WITH MonthlyMetrics AS (
     SELECT
-        DATE_TRUNC('month', "Order Date")::DATE AS report_month, -- For PostgreSQL
-        -- For other DBs, you might need to combine YEAR() and MONTH()
-        -- e.g., CAST(CONCAT(EXTRACT(YEAR FROM "Order Date"), '-', EXTRACT(MONTH FROM "Order Date"), '-01') AS DATE)
+        DATE_TRUNC('month', "Order Date")::DATE AS report_month, 
+       
         SUM(Sales) AS total_sales
     FROM superstore
     GROUP BY report_month
@@ -53,4 +52,5 @@ GROUP BY order_year, order_month
 ORDER BY order_year, order_month;
 
 SELECT * FROM V_MonthlyFinancialSummary;
+
 
